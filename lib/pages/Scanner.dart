@@ -24,6 +24,9 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.orange),
+            ),
             onPressed: () {
               scanQRCode();
             },
