@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Payment extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,8 +98,8 @@ class Payment extends StatelessWidget {
             Center(
               child: Column(
                 children: [
-                  Image.asset('assets/images/qrcode.jpg', width:200, height:200),
-                  Image.asset('assets/images/barcode.jpg',width:150),
+                  Image.asset('images/qrcode.jpg', width: 200, height: 200),
+                  Image.asset('images/barcode.jpg', width: 150),
                 ],
               ),
             ),
