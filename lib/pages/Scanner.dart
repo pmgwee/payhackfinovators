@@ -20,22 +20,21 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
         title: Text('QR Scanner'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                scanQRCode();
-              },
-              child: Text('Scan QR'),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(getResult),
-          ],
-        ),
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              scanQRCode();
+            },
+            child: Text('Scan QR'),
+          ),
+          SizedBox(
+            height: 20.0,
+          ),
+          Text(getResult),
+        ],
+      )),
     );
   }
 
