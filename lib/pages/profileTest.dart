@@ -19,13 +19,18 @@ class ProfilePage extends StatelessWidget {
                 color: Colors.orange,
               ),
             ),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('assets/profile_picture.jpg'),
+            // CircleAvatar(
+            //   radius: 50,
+            //   backgroundImage: AssetImage('assets/profile_picture.jpg'),
+            // ),
+            Image.asset(
+              'images/profile.png',
+              width: 200,
+              height: 200,
             ),
             SizedBox(height: 20),
             Text(
-              'John Doe',
+              'Name:Goh Peng Tien',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -33,7 +38,7 @@ class ProfilePage extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Software Developer',
+              'Phone:0101234567',
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,
