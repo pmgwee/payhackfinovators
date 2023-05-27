@@ -35,7 +35,7 @@ class OnboardingSlider extends StatelessWidget {
         ),
         Image.asset(
           'images/intro4.png',
-          scale: 2.7,
+          scale: 2.5,
         ),
       ],
       controllerColor: Color.fromARGB(255, 244, 123, 10),
@@ -55,7 +55,7 @@ class OnboardingSlider extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     color: Colors.black,
-                    fontSize: 30.0,
+                    fontSize: 35.0,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -82,13 +82,37 @@ class OnboardingSlider extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 480,
+                height: 400,
                 child: const DecoratedBox(
                   decoration: const BoxDecoration(
                       color: Color.fromARGB(255, 129, 129, 129)),
                 ),
               ),
-              Text('Receive QR Payment'),
+              Text(
+                'Receive QR Payment',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.0),
+                child: Text(
+                  'Enables the offline transactions \n using QR codes',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -97,20 +121,69 @@ class OnboardingSlider extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 480,
+                height: 400,
               ),
-              Text('Scan for QR Payment'),
+              Text(
+                'Scan for QR Payment',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.0),
+                child: Text(
+                  'Quick and Easy Payments \n with a Simple Scan',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
         Container(
+          alignment: Alignment.center,
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 480,
+                height: 380,
               ),
-              Text('Senang2Pay'),
+              Text(
+                'Senang2Pay',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                    color: Color.fromARGB(255, 214, 89, 0),
+                    fontSize: 45.0,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 18.0),
+                child: Text(
+                  'Seamless Payments \n Anytime, Anywhere!',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      color: Color.fromARGB(255, 61, 61, 61),
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
