@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payhackfinovators/pages/OnboardingSlider.dart';
+import 'package:payhackfinovators/pages/Payment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/onboardingslider',
         routes: <String, WidgetBuilder>{
           '/onboardingslider': (BuildContext context) => OnboardingSlider(),
+          '/payment': (BuildContext context) => Payment(),
         });
   }
 }
