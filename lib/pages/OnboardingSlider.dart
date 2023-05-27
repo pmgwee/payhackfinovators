@@ -9,7 +9,7 @@ class OnboardingSlider extends StatelessWidget {
       headerBackgroundColor: Colors.white,
       finishButtonText: "Let's Get Started",
       onFinish: () {
-        Navigator.pushNamed(context, "/payment");
+        Navigator.pushNamed(context, "/navbar");
       },
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: Color.fromARGB(255, 244, 123, 10),
