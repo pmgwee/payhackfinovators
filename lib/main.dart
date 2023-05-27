@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payhackfinovators/pages/History.dart';
 import 'package:payhackfinovators/pages/OnboardingSlider.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
 
@@ -27,10 +28,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/onboardingslider',
+        initialRoute: '/history',
         routes: <String, WidgetBuilder>{
           '/onboardingslider': (BuildContext context) => OnboardingSlider(),
           '/payment': (BuildContext context) => Payment(),
+          '/history': (BuildContext context) => History(),
         });
   }
 }
