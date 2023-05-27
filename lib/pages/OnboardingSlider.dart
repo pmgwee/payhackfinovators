@@ -24,7 +24,7 @@ class OnboardingSlider extends StatelessWidget {
         ),
         Image.asset(
           'images/intro2.png',
-          scale: 2.7,
+          scale: 2.8,
         ),
         Image.asset(
           'images/intro3.png',
@@ -44,7 +44,7 @@ class OnboardingSlider extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 480,
+                height: 400,
               ),
               Text(
                 'Welcome to Senang2Pay',
@@ -57,14 +57,17 @@ class OnboardingSlider extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                'Ensuring secure payments even',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w300,
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 12.0),
+                child: Text(
+                  'Ensuring secure payments even \n without internet access',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                 ),
               ),
@@ -77,6 +80,10 @@ class OnboardingSlider extends StatelessWidget {
             children: <Widget>[
               SizedBox(
                 height: 480,
+                child: const DecoratedBox(
+                  decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 129, 129, 129)),
+                ),
               ),
               Text('Receive QR Payment'),
             ],
