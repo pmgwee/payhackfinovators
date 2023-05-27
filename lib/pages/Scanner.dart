@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class MyCustomWidget extends StatefulWidget {
-  const MyCustomWidget({required Key key}) : super(key: key);
+  // const MyCustomWidget({required Key key}) : super(key: key);
 
   @override
   State<MyCustomWidget> createState() => _MyCustomWidgetState();
@@ -20,21 +20,22 @@ class _MyCustomWidgetState extends State<MyCustomWidget> {
         title: Text('QR Scanner'),
       ),
       body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              scanQRCode();
-            },
-            child: Text('Scan QR'),
-          ),
-          SizedBox(
-            height: 20.0,
-          ),
-          Text(getResult),
-        ],
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                scanQRCode();
+              },
+              child: Text('Scan QR'),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(getResult),
+          ],
+        ),
+      ),
     );
   }
 

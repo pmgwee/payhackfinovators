@@ -4,7 +4,7 @@ import 'package:payhackfinovators/pages/Payment.dart';
 import 'package:payhackfinovators/pages/Profile.dart';
 import 'package:payhackfinovators/pages/NavBar.dart';
 import 'package:payhackfinovators/pages/History.dart';
-// import 'package:payhackfinovators/pages/MyCustomWidget.dart';
+import 'package:payhackfinovators/pages/Scanner.dart';
 
 void main() {
   runApp(ProfileApp());
@@ -35,8 +35,8 @@ class ProfileApp extends StatelessWidget {
           '/payment': (BuildContext context) => Payment(),
           '/profile': (BuildContext context) => Profile(),
           '/history': (BuildContext context) => History(),
-
-          // '/scanner': (BuildContext context) => Scanner(),
+          '/scanner': (BuildContext context) => MyCustomWidget(),
+          // '/scanner': (BuildContext context) => MyCustomWidget(),
         });
   }
 }
