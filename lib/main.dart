@@ -3,7 +3,8 @@ import 'package:payhackfinovators/pages/OnboardingSlider.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
 import 'package:payhackfinovators/pages/Profile.dart';
 import 'package:payhackfinovators/pages/NavBar.dart';
-import 'package:payhackfinovators/pages/Scanner.dart';
+import 'package:payhackfinovators/pages/History.dart';
+// import 'package:payhackfinovators/pages/MyCustomWidget.dart';
 
 void main() {
   runApp(ProfileApp());
@@ -33,6 +34,9 @@ class ProfileApp extends StatelessWidget {
           '/navbar': (BuildContext context) => NavBar(),
           '/payment': (BuildContext context) => Payment(),
           '/profile': (BuildContext context) => Profile(),
+          '/history': (BuildContext context) => History(),
+
+          // '/scanner': (BuildContext context) => Scanner(),
         });
   }
 }

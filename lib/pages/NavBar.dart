@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
 import 'package:payhackfinovators/pages/Profile.dart';
+import 'package:payhackfinovators/pages/History.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _NavState extends State<NavBar> {
   List<Widget> _widgetOptions = <Widget>[
     Payment(),
     Text('Scan'),
-    Text('History'),
+    History(),
     Profile(),
   ];
 
