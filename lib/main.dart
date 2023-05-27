@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:payhackfinovators/pages/OnboardingSlider.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
+import 'package:payhackfinovators/pages/Profile.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ProfileApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class ProfileApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,10 +25,11 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/onboardingslider',
+        initialRoute: '/profile',
         routes: <String, WidgetBuilder>{
           '/onboardingslider': (BuildContext context) => OnboardingSlider(),
           '/payment': (BuildContext context) => Payment(),
+          '/profile': (BuildContext context) => Profile(),
         });
   }
 }
