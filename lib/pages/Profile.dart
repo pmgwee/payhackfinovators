@@ -94,32 +94,36 @@ class Profile extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Card(
-                margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
-                color: Colors.orange,
-                child: Padding(
-                  padding: const EdgeInsets.all(30),
-                  child: Row(
-                    children: <Widget>[
-                      Text(
-                        'Visa',
+              margin: EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 30.0),
+              color: Colors.orange,
+              child: Padding(
+                padding: const EdgeInsets.all(30),
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'Visa',
+                      style: TextStyle(
+                        fontSize: 17.5,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Open-sans',
+                      ),
+                    ),
+                    SizedBox(width: 100),
+                    Expanded(
+                      child: Text(
+                        'xxxx xxxx xxxx xxxx',
+                        overflow: TextOverflow.clip,
                         style: TextStyle(
                           fontSize: 17.5,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Open-sans',
                         ),
                       ),
-                      SizedBox(width: 100),
-                      Text(
-                        'xxxx xxxx xxxx 9123',
-                        style: TextStyle(
-                          fontSize: 17.5,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Open-sans',
-                        ),
-                      )
-                    ],
-                  ),
-                ))
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
