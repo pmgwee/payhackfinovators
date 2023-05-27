@@ -3,6 +3,7 @@ import 'package:payhackfinovators/pages/OnboardingSlider.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
 import 'package:payhackfinovators/pages/Profile.dart';
 import 'package:payhackfinovators/pages/NavBar.dart';
+import 'package:payhackfinovators/pages/Scanner.dart';
 
 void main() {
   runApp(ProfileApp());
