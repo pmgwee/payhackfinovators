@@ -95,11 +95,13 @@ class Payment extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(height: 40),
             Center(
               child: Column(
                 children: [
-                  Image.asset('images/qrcode.jpg', width: 200, height: 200),
-                  Image.asset('images/barcode.jpg', width: 150),
+                  Image.asset('images/qrcode.png', width: 150, height: 150),
+                  SizedBox(height: 40),
+                  Image.asset('images/barcode.png', width: 150),
                 ],
               ),
             ),
