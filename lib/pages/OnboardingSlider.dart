@@ -4,7 +4,6 @@ import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:local_auth/local_auth.dart';
 
 class OnboardingSlider extends StatelessWidget {
-
   final LocalAuthentication auth = LocalAuthentication();
 
   @override
@@ -12,34 +11,35 @@ class OnboardingSlider extends StatelessWidget {
     return OnBoardingSlider(
       headerBackgroundColor: Colors.white,
       finishButtonText: "Let's Get Started",
-      onFinish: () async {
-        try {
-          bool pass = await auth.authenticate(
-            localizedReason: 'Authenticate with pattern/pin/passcode',
-            options: const AuthenticationOptions(biometricOnly: false),
-          );
-          if (pass) {
-            Navigator.pushNamed(context, "/navbar");
-          }
-        } catch (e) {
-          showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return AlertDialog(
-                title: Text('Error'),
-                content: Text('Error while opening authentication method.'),
-                actions: <Widget>[
-                  TextButton(
-                    child: Text('OK'),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              );
-            },
-          );
-        }
+      onFinish: () {
+        Navigator.pushNamed(context, "/navbar");
+        // try {
+        //   bool pass = await auth.authenticate(
+        //     localizedReason: 'Authenticate with pattern/pin/passcode',
+        //     options: const AuthenticationOptions(biometricOnly: false),
+        //   );
+        //   if (pass) {
+        //     Navigator.pushNamed(context, "/navbar");
+        //   }
+        // } catch (e) {
+        //   showDialog(
+        //     context: context,
+        //     builder: (BuildContext context) {
+        //       return AlertDialog(
+        //         title: Text('Error'),
+        //         content: Text('Error while opening authentication method.'),
+        //         actions: <Widget>[
+        //           TextButton(
+        //             child: Text('OK'),
+        //             onPressed: () {
+        //               Navigator.of(context).pop();
+        //             },
+        //           ),
+        //         ],
+        //       );
+        //     },
+        //   );
+        // }
       },
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: Color.fromARGB(255, 244, 123, 10),

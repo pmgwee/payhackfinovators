@@ -1,7 +1,7 @@
 package com.example.payhackfinovators
 
-import io.flutter.embedding.android.FlutterFragmentActivity
+import io.flutter.embedding.android.FlutterActivity
 
-class MainActivity: FlutterFragmentActivity() {
+public class MainActivity: FlutterActivity() {
     // ...
 }
