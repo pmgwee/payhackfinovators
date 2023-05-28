@@ -1,7 +1,38 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
-class Payment extends StatelessWidget {
+class Payment extends StatefulWidget {
+  const Payment({super.key});
+
+  @override
+  State<Payment> createState() => _PaymentState();
+}
+
+class _PaymentState extends State<Payment> {
+  final String data = "12345680";
+  int randomNumber = Random().nextInt(9) + 10;
+  QrImage _QR = QrImage(
+    data: "12345680",
+    gapless: true,
+    size: 250,
+    errorCorrectionLevel: QrErrorCorrectLevel.H,
+  );
+
+  void _QR_generator() {
+    randomNumber = Random().nextInt(9) + 10;
+    setState(() {
+      _QR = QrImage(
+        data: data * randomNumber,
+        gapless: true,
+        size: 250,
+        errorCorrectionLevel: QrErrorCorrectLevel.H,
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +130,8 @@ class Payment extends StatelessWidget {
             Center(
               child: Column(
                 children: [
-                  Image.asset('images/qrcode.png', width: 150, height: 150),
+                  //Image.asset('images/qrcode.png', width: 150, height: 150),
+                  _QR != null ? _QR : Container(),
                   SizedBox(height: 40),
                   Image.asset('images/barcode.png', width: 150),
                 ],
@@ -116,7 +148,7 @@ class Payment extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppings',
+                      fontFamily: 'Poppins',
                     ),
                   ),
                 ],
@@ -124,6 +156,11 @@ class Payment extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _QR_generator,
+        tooltip: 'Refresh the QR Code',
+        child: const Icon(Icons.refresh),
       ),
     );
   }
