@@ -1,15 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:local_auth/local_auth.dart';
 
 class OnboardingSlider extends StatelessWidget {
+
+  final LocalAuthentication auth = LocalAuthentication();
+
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
       headerBackgroundColor: Colors.white,
       finishButtonText: "Let's Get Started",
-      onFinish: () {
-        Navigator.pushNamed(context, "/authentication");
+      onFinish: () async {
+        try {
+          bool pass = await auth.authenticate(
+            localizedReason: 'Authenticate with pattern/pin/passcode',
+            options: const AuthenticationOptions(biometricOnly: false),
+          );
+          if (pass) {
+            Navigator.pushNamed(context, "/navbar");
+          }
+        } catch (e) {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Text('Error'),
+                content: Text('Error while opening authentication method.'),
+                actions: <Widget>[
+                  TextButton(
+                    child: Text('OK'),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              );
+            },
+          );
+        }
       },
       finishButtonStyle: FinishButtonStyle(
         backgroundColor: Color.fromARGB(255, 244, 123, 10),
@@ -55,7 +85,7 @@ class OnboardingSlider extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     color: Colors.black,
-                    fontSize: 35.0,
+                    fontSize: 34.0,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -165,7 +195,7 @@ class OnboardingSlider extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     color: Color.fromARGB(255, 214, 89, 0),
-                    fontSize: 45.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
