@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:payhackfinovators/pages/Authentication.dart';
 import 'package:payhackfinovators/pages/OnboardingSlider.dart';
 import 'package:payhackfinovators/pages/Payment.dart';
 import 'package:payhackfinovators/pages/Profile.dart';
@@ -37,7 +36,6 @@ class ProfileApp extends StatelessWidget {
           '/profile': (BuildContext context) => Profile(),
           '/history': (BuildContext context) => History(),
           '/scanner': (BuildContext context) => MyCustomWidget(),
-          '/authentication': (BuildContext context) => FingerprintAuth(),
           // '/scanner': (BuildContext context) => MyCustomWidget(),
         });
   }
